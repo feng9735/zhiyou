@@ -1,4 +1,4 @@
-package com.zhjiyou100.gym;
+package com.zhiyou100.gym;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
