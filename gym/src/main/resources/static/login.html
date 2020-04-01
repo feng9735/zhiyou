@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+<style>
+	body {
+		margin: 20px;
+		text-align: center;
+		background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585754837824&di=bb30967fdeee8b444e742a81af36f8a1&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Fback_pic%2F05%2F47%2F09%2F405aae30a227c79.jpg");
+		background-size: 100%,100%;
+	}
+	#p1{
+		font-size: 40px;
+		color: rgb(255,255,0);
+	}
+	.p1{
+		font-size: 30px;
+		color: rgb(255,255,0);
+	}
+	#b1{
+		width: 150px;
+		height: 50px;
+		letter-spacing: 5px;
+	}
+	.i1{
+		color: black;
+	}
+	#p2{
+		color: red;
+		font-size:26px;
+	}
+</style>
+</head>
+<body>
+	<p id="p1">健身系统</p>
+	<p id="p2" th:text="#{msg}"></p>
+	<form action="/user/login" method="post">
+		<p class="p1">账号：<input type="text"  name="uAccount" value="admin" class="i1"></p>
+		<p class="p1">密码：<input type="password" name="uPassword" class="i1"></p>
+		<button id="b1" class="btn btn-success">登录</button>
+	</form>
+</body>
+</html>

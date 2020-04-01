@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.zhiyou100.gym.mapper.UserMapper">
+    <resultMap type="com.zhiyou100.gym.pojo.GymUser" id="user">
+        <id column="u_id" property="uId" />
+        <result column="u_num" property="uNum"/>
+        <result column="u_account" property="uAccount"/>
+        <result column="u_password" property="uPassword"/>
+        <result column="u_create_time" property="uCreateTime"/>
+        <result column="u_logout_time" property="uLogoutTime"/>
+        <result column="balance" property="balance"/>
+        <result column="u_status" property="uStatus"/>
+        <!--<collection property="groups" ofType="com.zhiyou100.img.pojo.Group">
+            <result column="id" property="gd"/>
+            <result column="g_name" property="groupName"/>
+            <result column="desc" property="desc"/>
+            <result column="user_id" property="userId"/>
+        </collection>-->
+    </resultMap>
+    <select id="findByAccount" resultMap="user">
+    select * from gym_user where u_account = #{account}
+  </select>
+
+   <!-- <select id="findByUId" resultMap="user">
+    select * from `user` u
+    RIGHT JOIN `group` g on u.id = g.user_id
+    where u.id = #{id}
+    </select>-->
+</mapper>

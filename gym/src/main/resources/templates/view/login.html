@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
+<style>
+	body {
+		margin: 20px;
+		text-align: center;
+		background:url("https://img.51miz.com/Element/00/59/15/30/d62d7729_E591530_c07eb64e.jpg!/quality/90/unsharp/true/compress/true/format/jpg");
+		background-size: 100%,100%;
+	}
+	#p1{
+		font-size: 40px;
+		color: rgb(255,255,0);
+	}
+	.p1{
+		font-size: 30px;
+		color: rgb(255,255,0);
+	}
+	#b1{
+		width: 150px;
+		height: 50px;
+		letter-spacing: 5px;
+	}
+	.i1{
+		color: black;
+	}
+	#p2{
+		color: red;
+		font-size:26px;
+	}
+</style>
+</head>
+<body>
+	<p id="p1">健身系统</p>
+	<p id="p2" th:text="{msg}"></p>
+	<form action="/user/login" method="post">
+		<p class="p1">账号：<input type="text" name="uAccount" class="i1"></p>
+		<p class="p1">密码：<input type="password" name="uPassword" class="i1"></p>
+		<button id="b1" class="btn btn-success">登录</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>健身房管理系统</title>
+	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css">
+	<style type="text/css">
+	.admin-img{
+	width: 100%;
+	height: 100%;
+	}
+	</style>
+</head>
+<body>
+<div class="header">
+	<h1><a href="#">健身房管理系统</a></h1>
+	<div class="user">
+		<a href="#" th:text="${userNum}"></a>
+		<a href="UserLoginOutController">退出</a>
+	</div>
+</div>
+<div class="main">
+	<ul class="left-side">
+		<li class="menu-title active">
+			<a href="#">
+				<i class=" fa fa-users"></i>&nbsp;&nbsp;前台系统
+			</a>
+		</li>
+		<li class="sub-menu">
+			<ul>
+				<li class="active">
+					<a href="HouseShowController"  target="pageBox">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;前台管理
+					</a>
+				</li>
+				
+				<li class="active">
+					<a href="ContractShowController"  target="pageBox">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;租柜管理
+					</a>
+				</li>
+				<li>
+					<a href="LesseeShowController"  target="pageBox">
+					<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;前台签到
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ChummageShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;会员进场
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ChummageShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;潜客登记
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ChummageShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;会员充值
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ChummageShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;会员卡管理
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-title">
+			<a href="#">
+				<i class=" fa fa-file-text"></i>&nbsp;&nbsp;用户系统
+			</a>
+		</li>
+		<li class="sub-menu">
+			<ul>
+				<li>
+					<a target="pageBox" href="SupportShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;训练记录
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="RepairShowController">
+					<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;团课预约
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ActivityShowController">
+					<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;私教预约
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ActivityShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;教练查询
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="ActivityShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;运动报表
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-title">
+			<a href="#" >
+				<i class=" fa fa-sitemap"></i>&nbsp;&nbsp;教练系统
+			</a>
+		</li>
+		<li class="sub-menu">
+			<ul class="menu">
+				<li>
+					<a target="pageBox" href="RoleShowController">
+					<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;排课管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+					<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;学员管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;日程管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;统计分析
+					</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="menu-title">
+			<a href="#" >
+				<i class=" fa fa-sitemap"></i>&nbsp;&nbsp;主管系统
+			</a>
+		</li>
+		<li class="sub-menu">
+			<ul class="menu">
+				<li>
+					<a target="pageBox" href="RoleShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;统计分析
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;教练管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;员工管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;课程管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;用户管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;财务管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;业绩管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;系统日志
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;设备维修记录
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-title">
+			<a href="#" >
+				<i class=" fa fa-sitemap"></i>&nbsp;&nbsp;后勤系统
+			</a>
+		</li>
+		<li class="sub-menu">
+			<ul class="menu">
+				<li>
+					<a target="pageBox" href="RoleShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;后勤管理
+					</a>
+				</li>
+				<li>
+					<a target="pageBox" href="UserShowController">
+						<i class=" fa fa-circle-thin"></i>&nbsp;&nbsp;修缮记录
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="right-side">
+		<iframe class="admin-img" name="pageBox" src="../1.html">
+	
+		</iframe>
+		<div class="footer">
+			喜力健身 ©2020 河北石家庄喜力健身俱乐部
+		</div>
+	</div>
+</div>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>
